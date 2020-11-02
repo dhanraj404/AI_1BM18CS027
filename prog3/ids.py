@@ -2,24 +2,16 @@
 # given graph 
 from collections import defaultdict 
 
-# This class represents a directed graph using adjacency 
-# list representation 
 class Graph: 
 
 	def __init__(self,vertices): 
 
-		# No. of vertices 
 		self.V = vertices 
-
-		# default dictionary to store graph 
 		self.graph = defaultdict(list) 
 
-	# function to add an edge to graph 
 	def addEdge(self,u,v): 
 		self.graph[u].append(v) 
 
-	# A function to perform a Depth-Limited search 
-	# from given source 'src' 
 	def DLS(self,src,target,maxDepth): 
 
 		if src == target : return True
@@ -43,8 +35,7 @@ class Graph:
 			if (self.DLS(src, target, i)): 
 				return True
 		return False
-
-# Create a graph given in the above diagram 
+		
 g = Graph (7); 
 g.addEdge(0, 1) 
 g.addEdge(0, 2) 
@@ -61,5 +52,3 @@ if g.IDDFS(src, target, maxDepth) == True:
 else : 
 	print ("Target is NOT reachable from source " +
 		"within max depth") 
-
-# This code is contributed by Neelam Pandey 
