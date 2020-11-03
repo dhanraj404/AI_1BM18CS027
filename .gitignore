@@ -2,3 +2,9 @@
 
 venv/
 .vscode/
+
+8puzzle.py
+maze.py
+vaccum.py
+
+prog4/

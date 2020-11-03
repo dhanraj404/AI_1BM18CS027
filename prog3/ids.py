@@ -15,40 +15,52 @@ class Graph:
 	def DLS(self,src,target,maxDepth): 
 
 		if src == target : return True
-
-		# If reached the maximum depth, stop recursing. 
 		if maxDepth <= 0 : return False
-
-		# Recur for all the vertices adjacent to this vertex 
 		for i in self.graph[src]: 
 				if(self.DLS(i,target,maxDepth-1)): 
 					return True
 		return False
 
-	# IDDFS to search if target is reachable from v. 
-	# It uses recursive DLS() 
 	def IDDFS(self,src, target, maxDepth): 
-
-		# Repeatedly depth-limit search till the 
-		# maximum depth 
 		for i in range(maxDepth): 
 			if (self.DLS(src, target, i)): 
 				return True
 		return False
-		
-g = Graph (7); 
-g.addEdge(0, 1) 
-g.addEdge(0, 2) 
-g.addEdge(1, 3) 
-g.addEdge(1, 4) 
-g.addEdge(2, 5) 
-g.addEdge(2, 6) 
 
-target = 6; maxDepth = 3; src = 0
 
+
+n = int(input("Enter The Number of Vertices"))	
+g = Graph(n)
+
+
+ed = int(input("Enter Number of egdes: "))
+for _ in range(ed):
+	print("Enter Edge",_,": ")
+	start, end = map(int, input().split())
+	g.addEdge(start, end)
+target, maxDepth, src = map(int, input("Enter Target, Max Depth, Source:").split())
 if g.IDDFS(src, target, maxDepth) == True: 
 	print ("Target is reachable from source " +
 		"within max depth") 
 else : 
 	print ("Target is NOT reachable from source " +
 		"within max depth") 
+
+"""
+7
+
+6
+
+0 1
+0 2
+1 3
+1 4
+2 5
+2 6
+
+6 3 0
+
+3
+
+
+"""
