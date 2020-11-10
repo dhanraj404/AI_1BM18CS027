@@ -1,0 +1,30 @@
+(venv) dhanrz@pop-os:~/LAB_WORK/AI_1BM18CS027$ python script.py
+Enter number of Rows: 5  
+Enter number of Column: 5
+Enter the (x, y) of destination
+4 2
+
+Enter the maze structure: (0 if blocked,1 if free): 
+1 0 1 1 1
+0 1 1 1 1
+1 1 1 1 0
+1 1 0 0 1
+1 0 1 1 1
+
+
+The Maze is:
+1 0 1 1 1 
+0 1 1 1 1 
+1 1 1 1 0 
+1 1 0 0 1 
+1 0 1 1 1 
+
+The Path is:
+- 0 1 1 1 
+0 - 1 1 1 
+1 1 - - 0 
+1 1 0 0 - 
+1 0 - - - 
+
+[[0, 0], [1, 1], [2, 2], [2, 3], [3, 4], [4, 4], [4, 3], [4, 2]]
+(venv) dhanrz@pop-os:~/LAB_WORK/AI_1BM18CS027$ 
