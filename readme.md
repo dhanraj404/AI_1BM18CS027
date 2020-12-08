@@ -6,3 +6,4 @@ AI LAB PROGRAMS:
 3. [iterative deepening search](/prog3)
 4. [Vaccum Cleaner](/prog4)
 5. [KB Entilment](/prog5)
+6. [Logic Reasoning](/prog6)
