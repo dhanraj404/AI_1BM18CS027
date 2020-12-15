@@ -9,3 +9,5 @@ AI LAB PROGRAMS:
 6. [Logic Reasoning](/prog6)
 7. [KB Resolution](/prog7)
 8. [Unification](/prog8)
+9. [First Order Logic -> CNF From](/prog9)
+10. [Forward Reasoning](/prog10)
